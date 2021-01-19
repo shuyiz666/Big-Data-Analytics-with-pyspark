@@ -1,0 +1,60 @@
+### This assignment is a collaboration work with Yinan Wang
+### Task3 and Task4 are included in one py file
+
+## Task1
+please check task1.pdf
+
+## Task2 
+{10: 1, 23: 1, 8: 6, 26: 1, 30: 1, 25: 1, 3: 11, 0: 8, 14: 2, 36: 2, 38: 4, 15: 2, 52: 1, 68: 1, 88: 3, 39: 2, 65: 1, 80: 1}
+
+## Task3
+['the', 'and', 'that', 'for', 'from', 'you', 'are', 'this', 'not', 'will', 'with', 'writes', 'have', 'was', 'but', 'subject', 'date', 'has', 'lines', 'gmt', 'your', 'there', 'all', 'article', 'apr', 'appears', 'one', 'can', 'some', 'israel', 'about', 'wolverine', 'art', 'new', 'more', 'they', 'any', 'their', 'oil', 'only', 'car', 'would', 'been', 'which', 'like', 'may', 'very', 'turkish', 'most', 'annual']
+['the', 'and', 'for', 'from', 'lines', 'subject', 'date', 'that', 'apr', 'gmt', 'you', 'have', 'this', 'with', 'can', 'any', 'but', 'are', 'windows', 'not', 'there', 'would', 'thanks', 'anyone', 'know', 'some', 'what', 'does', 'about', 'writes', 'has', 'file', 'help', 'please', 'will', 'all', 'card', 'article', 'one', 'use', 'get', 'like', 'may', 'how', 'out', 'need', 'version', 'distribution', 'was', 'your']
+['the', 'jpeg', 'and', 'you', 'for', 'this', 'image', 'file', 'are', 'that', 'with', 'from', 'gif', 'not', 'can', 'than', 'have', 'images', 'format', 'will', 'version', 'free', 'files', 'quality', 'but', 'programs', 'about', '1st', 'color', 'some', 'see', 'available', "it's", 'software', 'use', 'more', 'may', 'new', 'get', 'also', 'other', 'what', "don't", 'conversion', 'much', 'note', 'display', 'does', 'jfif', 'shareware']
+['the', 'and', 'that', 'you', 'for', 'not', 'are', 'this', 'from', 'have', 'was', 'with', 'they', 'but', 'what', 'all', 'who', 'there', 'people', 'about', 'one', 'would', 'were', 'will', 'their', 'your', 'can', 'has', 'subject', 'his', 'which', 'some', 'date', 'lines', 'them', 'any', 'writes', 'god', 'out', 'more', 'other', "don't", 'had', 'when', 'apr', 'gmt', 'been', 'article', 'think', 'just']
+['the', 'and', 'for', 'that', 'from', 'with', 'you', 'have', 'this', 'are', 'subject', 'lines', 'date', 'apr', 'but', 'not', 'gmt', 'can', 'drive', 'one', 'will', 'any', 'would', 'all', 'has', 'what', 'was', 'about', 'there', 'use', 'they', 'writes', 'like', 'which', 'out', 'some', 'get', 'when', 'scsi', 'your', 'just', 'know', 'article', 'only', "don't", 'also', 'system', 'does', 'more', 'how']
+['the', 'and', 'that', 'will', 'from', 'this', 'encryption', 'for', 'are', 'with', 'chip', 'technology', 'have', 'clipper', 'government', 'can', 'not', 'system', 'new', 'privacy', 'was', 'lines', 'apr', 'law', 'gmt', 'access', 'use', 'protect', 'key', 'date', 'they', 'subject', 'but', 'has', 'devices', 'data', 'you', 'also', 'other', 'keys', 'enforcement', 'there', 'one', 'two', 'what', 'security', 'how', 'all', 'writes', 'any']
+['the', 'and', 'that', 'for', 'from', 'you', 'this', 'with', 'are', 'not', 'have', 'apr', 'one', 'lines', 'but', 'abortion', 'will', 'subject', 'gmt', 'date', 'writes', 'would', 'coverage', 'article', 'what', 'they', 'your', 'there', 'can', 'than', 'pay', 'health', "don't", 'used', 'use', 'when', 'about', 'has', 'modem', 'was', 'insurance', 'all', 'which', 'private', 'should', 'does', 'any', 'other', 'them', 'battery']
+['the', 'and', 'that', 'for', 'this', 'from', 'you', 'have', 'not', 'with', 'are', 'they', 'but', 'was', 'date', 'subject', 'lines', 'apr', 'would', 'writes', 'gmt', 'will', 'can', 'has', 'article', 'all', 'one', 'about', 'more', 'his', 'who', 'what', 'clipper', 'key', 'out', 'your', 'any', "don't", 'there', 'just', 'get', 'than', 'some', 'only', 'think', 'like', 'good', 'when', 'chip', 'been']
+['the', 'and', 'that', 'you', 'they', 'was', 'for', 'have', 'from', 'not', 'this', 'are', 'with', 'were', 'would', 'subject', 'writes', 'apr', 'date', 'what', 'lines', 'but', 'all', 'article', 'who', 'gmt', 'had', 'people', 'out', 'there', 'one', 'their', 'fbi', 'about', 'been', 'fire', 'when', 'did', 'them', 'some', 'just', 'koresh', 'your', 'will', 'any', "don't", 'has', 'think', 'his', 'could']
+['the', 'and', 'for', 'that', 'you', 'from', 'this', 'with', 'are', 'have', 'can', 'not', 'subject', 'but', 'will', 'date', 'lines', 'your', 'use', 'which', 'what', 'all', 'apr', 'there', 'some', 'window', 'any', 'gmt', 'windows', 'available', 'file', 'get', 'one', 'also', 'has', 'other', 'system', 'how', 'about', 'when', 'may', 'program', 'more', 'would', 'software', 'like', 'using', 'data', 'server', 'version']
+['for', 'from', 'the', 'date', 'subject', 'apr', 'lines', 'gmt', 'and', 'sale', 'distribution', 'you', 'please', 'with', 'have', 'all', 'new', 'are', 'this', 'usa', 'can', 'lost', 'condition', 'asking', 'will', 'won', 'offer', 'e-mail', 'email', 'interested', 'thanks', 'not', 'has', 'like', 'send', 'your', 'best', 'games', 'tue', 'used', 'one', 'contact', 'forsale', 'good', 'list', 'shipping', 'call', 'that', 'car', 'price']
+['the', 'that', 'and', 'you', 'not', 'are', 'this', 'from', 'for', 'have', 'can', 'what', 'writes', 'but', 'with', 'article', 'lines', 'subject', 'they', 'apr', 'there', 'date', 'one', 'all', 'would', 'say', 'gmt', 'your', 'objective', 'about', 'which', 'morality', 'was', "don't", 'than', 'some', 'how', 'any', 'more', 'does', 'science', 'moral', 'god', 'has', 'then', 'just', 'think', 'will', 'people', 'only']
+['the', 'and', 'that', 'for', 'you', 'from', 'have', 'this', 'are', 'was', 'with', 'subject', 'lines', 'not', 'apr', 'date', 'but', 'gmt', 'they', 'writes', 'article', 'would', 'about', 'what', 'can', 'all', 'one', 'will', 'there', 'like', 'out', 'your', 'has', 'just', 'get', "don't", 'any', 'when', 'some', 'had', 'more', 'car', 'know', 'who', 'think', 'than', "it's", 'only', 'good', 'how']
+['the', 'that', 'good', 'cubs', 'and', 'very', 'from', 'date', 'but', 'excellent', 'suck', 'missing', 'this', 'what', 'you', 'tn.de7', 'not', 'subject', 'have', 'will', 'are', 'lines', 'geoffrey', 'cover', 'module', 'fair', 'uccxkvb', 'can', 'they', 'with', 'your', 'for', 'had', 'has', 'who', 'time', 'use', 'article', 'microsoft', 'writes', 'like', 'gmt', 'one', 'apr', 'response', "don't", 'dragons', "it's", 'more', 'detached']
+['the', 'and', 'from', 'that', 'for', 'subject', 'apr', 'lines', 'gmt', 'writes', 'date', 'have', 'article', 'was', 'with', 'you', 'pts', 'has', 'are', 'all', 'about', 'not', 'this', 'does', 'who', 'now', 'more', 'card', 'people', 'new', 'one', 'like', 'had', 'would', 'there', 'his', 'will', 'know', "don't", 'some', 'them', 'what', 'ultra', 'first', 'any', 'netanyahu', 'just', 'can', 'wed', 'your']
+['the', 'from', 'and', 'apr', 'date', 'lines', 'subject', 'you', 'that', 'gmt', 'for', 'not', 'are', 'writes', 'this', 'article', 'have', 'would', 'all', 'but', 'they', 'was', 'about', 'with', 'any', 'some', 'just', 'one', 'what', 'can', 'will', 'dos', 'university', 'get', 'how', "don't", 'there', 'your', 'has', 'like', 'distribution', 'who', 'fri', 'tue', 'know', 'people', 'new', 'may', 'which', 'more']
+['the', 'from', 'apr', 'that', 'subject', 'lines', 'you', 'date', 'gmt', 'for', 'writes', 'and', 'with', 'are', 'this', 'was', 'what', 'article', 'would', 'launch', 'has', 'van', 'all', 'just', 'have', 'think', 'your', 'know', 'may', 'like', "don't", 'can', 'one', 'why', 'robert', 'fri', 'they', 'distribution', 'dec', "i've", 'see', 'but', 'will', 'his', 'thu', "that's", 'who', 'sat', 'paul', 'she']
+['the', 'and', 'for', 'from', 'that', 'space', 'are', 'will', 'was', 'with', 'this', 'date', 'apr', 'subject', 'have', 'lines', 'not', 'gmt', 'would', 'may', 'but', 'orbit', 'you', 'also', 'they', 'mission', 'one', 'about', 'has', 'there', 'first', 'nasa', 'more', 'were', 'each', 'new', 'satellite', 'mars', 'data', 'writes', 'which', 'station', 'solar', 'had', 'system', 'been', 'article', 'all', 'its', 'university']
+['the', 'are', 'you', 'and', 'that', 'with', 'have', 'from', 'your', 'subject', 'not', 'writes', 'apr', 'just', 'lines', 'date', 'but', 'for', 'they', 'what', 'one', 'there', 'like', 'this', "don't", 'data', 'gmt', 'article', 'has', 'would', 'think', 'when', 'may', 'get', 'really', "it's", 'dealer', 'can', 'too', 'evolutionary', 'all', 'more', 'than', 'use', 'problems', 'centris', 'want', 'pin', 'were', 'many']
+['the', 'and', 'was', 'for', 'from', 'with', 'that', 'have', 'they', 'are', 'lines', 'but', 'apr', 'this', 'subject', 'writes', 'his', 'would', 'not', 'date', 'year', 'article', 'captain', "don't", 'had', 'has', 'team', 'when', 'gmt', 'good', 'last', 'one', 'like', 'there', 'deal', 'think', 'over', 'did', 'c650', 'been', 'what', 'very', 'traded', 'than', 'know', 'now', 'other', 'years', "it's", 'captains']
+
+
+
+## Task4
+(16, [('talk.politics.guns', 0.1388888888888889), ('comp.sys.ibm.pc.hardware', 0.1111111111111111), ('alt.atheism', 0.10185185185185185)])<br>
+(4, [('comp.sys.mac.hardware', 0.3091442953020134), ('comp.sys.ibm.pc.hardware', 0.25461409395973156), ('sci.electronics', 0.22525167785234898)])<br>
+(6, [('sci.electronics', 0.24334600760456274), ('comp.sys.ibm.pc.hardware', 0.23193916349809887), ('talk.religion.misc', 0.14068441064638784)])<br>
+(12, [('rec.motorcycles', 0.2303549571603427), ('rec.autos', 0.21101591187270502), ('rec.sport.hockey', 0.18384332925336597)])<br>
+(0, [('talk.politics.mideast', 0.3983050847457627), ('rec.autos', 0.1440677966101695), ('sci.med', 0.13559322033898305)])<br>
+(10, [('misc.forsale', 0.6303317535545023), ('rec.sport.baseball', 0.07424960505529225), ('rec.sport.hockey', 0.05845181674565561)])<br>
+(14, [('talk.politics.mideast', 0.18404907975460122), ('talk.politics.misc', 0.09202453987730061), ('rec.sport.baseball', 0.08588957055214724)])<br>
+(18, [('comp.sys.mac.hardware', 0.1509433962264151), ('sci.med', 0.1320754716981132), ('rec.autos', 0.1320754716981132)])<br>
+(8, [('talk.politics.guns', 0.546916890080429), ('talk.politics.misc', 0.2064343163538874), ('talk.religion.misc', 0.15013404825737264)])<br>
+(2, [('rec.sport.hockey', 0.4074074074074074), ('misc.forsale', 0.2962962962962963), ('comp.graphics', 0.14814814814814814)])<br>
+(7, [('rec.sport.baseball', 0.49215922798552475), ('sci.crypt', 0.43184559710494574), ('rec.sport.hockey', 0.031966224366706875)])<br>
+(5, [('sci.crypt', 0.4827586206896552), ('sci.space', 0.2672413793103448), ('talk.religion.misc', 0.06896551724137931)])<br>
+(3, [('soc.religion.christian', 0.25006664889362834), ('talk.politics.mideast', 0.22127432684617435), ('talk.politics.misc', 0.12156758197813916)])<br>
+(9, [('comp.windows.x', 0.506859756097561), ('comp.os.ms-windows.misc', 0.16310975609756098), ('comp.graphics', 0.14557926829268292)])<br>
+(1, [('comp.graphics', 0.26926196269261965), ('comp.os.ms-windows.misc', 0.24128142741281428), ('comp.sys.ibm.pc.hardware', 0.10989456609894566)])<br>
+(13, [('comp.os.ms-windows.misc', 0.30434782608695654), ('sci.crypt', 0.13043478260869565), ('alt.atheism', 0.13043478260869565)])<br>
+(19, [('rec.sport.hockey', 0.25316455696202533), ('rec.sport.baseball', 0.17721518987341772), ('rec.motorcycles', 0.11392405063291139)])<br>
+(17, [('sci.space', 0.7054263565891473), ('rec.sport.hockey', 0.09302325581395349), ('talk.politics.misc', 0.03875968992248062)])<br>
+(15, [('talk.politics.mideast', 0.17468354430379746), ('talk.politics.misc', 0.13164556962025317), ('sci.space', 0.10126582278481013)])<br>
+(11, [('alt.atheism', 0.48377281947261663), ('talk.religion.misc', 0.27281947261663286), ('sci.space', 0.08519269776876268)])<br>
+
+
+Take record ((8, [('talk.politics.guns', 0.546916890080429), ('talk.politics.misc', 0.2064343163538874), ('talk.religion.misc', 0.15013404825737264)]) for example, it shows that in cluster no.8, the top three real categories are all with the same topic in talk.politics. The main categories in one cluster are highly relevant.
+
+Which also means the clustering algorithm works. In the random case, each category should have 5%. With the clustering algorithm, some category have obiviously changing on occupation. Especially with a result (17, [('sci.space', 0.7054263565891473), ('rec.sport.hockey', 0.09302325581395349), ('talk.politics.misc', 0.03875968992248062)]), sci.space occupied more than 70%.
+

@@ -1,0 +1,150 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+
+from __future__ import print_function
+import sys
+import re
+import numpy as np
+
+from numpy import dot
+from numpy.linalg import norm
+from pyspark import SparkContext
+
+
+sc = SparkContext(appName="A2")
+
+
+
+wikiCategoryLinks=sc.textFile(sys.argv[2])
+
+wikiCats=wikiCategoryLinks.map(lambda x: x.split(",")).map(lambda x: (x[0].replace('"', ''), x[1].replace('"', '') ))
+
+wikiPages = sc.textFile(sys.argv[1])
+
+
+numberOfDocs = wikiPages.count()
+
+
+validLines = wikiPages.filter(lambda x : 'id' in x and 'url=' in x)
+
+
+keyAndText = validLines.map(lambda x : (x[x.index('id="') + 4 : x.index('" url=')], x[x.index('">') + 2:][:-6])) 
+
+
+
+def buildArray(listOfIndices):
+    
+    returnVal = np.zeros(20000)
+    
+    for index in listOfIndices:
+        returnVal[index] = returnVal[index] + 1
+    
+    mysum = np.sum(returnVal)
+    
+    returnVal = np.divide(returnVal, mysum)
+    
+    return returnVal
+
+
+def build_zero_one_array (listOfIndices):
+    
+    returnVal = np.zeros (20000)
+    
+    for index in listOfIndices:
+        if returnVal[index] == 0: returnVal[index] = 1
+    
+    return returnVal
+
+
+def stringVector(x):
+    returnVal = str(x[0])
+    for j in x[1]:
+        returnVal += ',' + str(j)
+    return returnVal
+
+
+
+def cousinSim (x,y):
+	normA = np.linalg.norm(x)
+	normB = np.linalg.norm(y)
+	return np.dot(x,y)/(normA*normB)
+
+
+keyAndText = validLines.map(lambda x : (x[x.index('id="') + 4 : x.index('" url=')], x[x.index('">') + 2:][:-6]))
+
+
+
+regex = re.compile('[^a-zA-Z]')
+
+keyAndListOfWords = keyAndText.map(lambda x : (str(x[0]), regex.sub(' ', x[1]).lower().split()))
+
+allWords = keyAndListOfWords.flatMap(lambda x:((i,1) for i in x[1]))
+allWords.take(10)
+
+allCounts = allWords.reduceByKey(lambda a, b: a + b)
+
+topWords = allCounts.top(20000, lambda x: x[1])
+
+topWordsK = sc.parallelize(range(20000))
+
+dictionary = topWordsK.map (lambda x : (topWords[x][0], x))
+
+
+allWordsWithDocID = keyAndListOfWords.flatMap(lambda x: ((j, x[0]) for j in x[1]))
+
+allDictionaryWords = dictionary.join(allWordsWithDocID)
+
+justDocAndPos = allDictionaryWords.map(lambda x: (x[1][1], x[1][0]))
+
+allDictionaryWordsInEachDoc = justDocAndPos.groupByKey()
+
+allDocsAsNumpyArrays = allDictionaryWordsInEachDoc.map(lambda x: (x[0], buildArray(x[1])))
+
+print(allDocsAsNumpyArrays.take(3))
+
+
+zeroOrOne = allDocsAsNumpyArrays.map(lambda x: (x[0],np.clip(np.multiply(x[1], 9e50), 0, 1)))
+
+
+dfArray = zeroOrOne.reduce(lambda x1, x2: ("", np.add(x1[1], x2[1])))[1]
+
+multiplier = np.full(20000, numberOfDocs)
+
+
+idfArray = np.log(np.divide(np.full(20000, numberOfDocs), dfArray))
+
+allDocsAsNumpyArraysTFidf = allDocsAsNumpyArrays.map(lambda x: (x[0], np.multiply(x[1], idfArray)))
+
+print(allDocsAsNumpyArraysTFidf.take(2))
+
+
+
+featuresRDD = wikiCats.join(allDocsAsNumpyArraysTFidf).map(lambda x: (x[1][0], x[1][1]))
+
+def getPrediction (textInput, k):
+    myDoc = sc.parallelize (('', textInput))
+    wordsInThatDoc = myDoc.flatMap (lambda x : ((j, 1) for j in regex.sub(' ', x).lower().split()))
+    allDictionaryWordsInThatDoc = dictionary.join (wordsInThatDoc).map (lambda x: (x[1][1], x[1][0])).groupByKey ()
+    myArray = buildArray (allDictionaryWordsInThatDoc.top (1)[0][1])
+    myArray = np.multiply (myArray, idfArray)
+    distances = featuresRDD.map (lambda x : (x[0], np.dot (x[1], myArray)))
+    topK = distances.top (k, lambda x : x[1])
+    docIDRepresented = sc.parallelize(topK).map (lambda x : (x[0], 1))
+
+    numTimes = docIDRepresented.reduceByKey(lambda x,y:x+y)
+
+    return numTimes.top(k, lambda x: x[1])
+
+
+print(getPrediction('Sport Basketball Volleyball Soccer', 10))
+
+
+print(getPrediction('What is the capital city of Australia?', 10))
+
+
+print(getPrediction('How many goals Vancouver score last year?', 10))
+
+sc.stop()
+
+
